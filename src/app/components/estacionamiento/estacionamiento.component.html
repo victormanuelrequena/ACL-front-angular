@@ -1,0 +1,50 @@
+<div class="estacionamiento">
+<div class="grid-estacionamiento">
+<div class="puesto {{puesto.estado}}" *ngFor="let puesto of Puestos; let iControl=index">
+
+	<div class="btns-disponible-state" *ngIf="puesto.estado === 'disponible'">
+
+	<button class="btn-puesto" (click)="estacionarVehiculo(puesto._id)">
+		Estacionar
+	</button>
+		<!-- //Modal Reservar -->
+	<div class="modal-reservar">
+	<div class="modal">
+		<h4 class="t-comprobante">¿Por cuantos dias desea reservar?</h4>
+	<form class="form-modal-reserve" [formGroup]="insertDaysReserve" (ngSubmit)="reservarPuesto({idBody:puesto._id})">
+		<input class="input__pagar" type="Number" name="" formControlName="days">
+		<button class="btn-pagar" type="submit" (click)="showModalReserve()">
+		Pagar
+	</button>
+	</form>
+	</div>
+	</div>
+	<!-- -------------------------------------------------------- -->
+	</div>
+
+
+	<div class="btns-reservado-state" *ngIf="puesto.estado === 'reservado'">
+	<form class="form-key" [formGroup]="insertKey" (ngSubmit)="estacionarReservado({idBody:puesto._id})">
+	<input class="input__key" type="text" name="" formControlName="key">
+	<button type="submit" class="btn-puesto">
+		Estacionar reservado
+	</button>
+	</form>
+
+	<button class="btn-puesto" (click)="cancelarReservacion({idBody:puesto._id})">
+		Cancelar reservacion
+	</button>
+
+	</div>
+
+	<div class="btns-ocupado-state" *ngIf="puesto.estado === 'ocupado'">
+	<button class="btn-puesto" (click)="retirarVehiculo({idBody:puesto._id})">
+		Retirar Vehiculo
+	</button>
+	</div>
+
+	<p class="lugar">{{puesto.lugar}}</p>
+</div>
+
+</div>
+</div>

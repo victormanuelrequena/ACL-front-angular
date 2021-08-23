@@ -1,0 +1,78 @@
+.menu {
+	/*border: 1px solid red;*/
+	min-width: 300px;
+	max-width: 100%;
+	height: auto;
+	padding: 1em 0em;
+	background: #082e3b;
+	/*transform: translateX(-100%);*/
+}
+
+.title-menu-nav {
+	/*border: 1px solid blue;*/
+	display: block;
+	text-align: center;
+	font-size: 32px;
+	padding: .5em 2em;
+	color: #dea479;
+	font-family: Arial, sans-serif;
+}
+
+nav.menu-nav {
+	padding-top: .5em;
+}
+
+ul.menu-options {
+	width: 50%;
+	margin: auto;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap:  1em;
+}
+
+input {
+	border-radius: 10px;
+	width: 150px;
+	border: none;
+	outline: none;
+	font-size: 17px;
+	padding: .4em .8em;
+}
+
+li {
+	list-style: none;
+}
+
+li > button, .btn-alquilar-fijo {
+	border: 1px solid white;
+	outline: none;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em 2em;
+	border-radius: 12px;
+	font-size: 19px;
+	cursor: pointer;
+	transition: .4s;
+	background: transparent;
+}
+
+li.menu-option > button:hover, .btn-alquilar-fijo:hover {
+	border: 1px solid transparent;
+	background: rgba(180,180,180, .4);
+	transform: sclae(.9);
+}
+
+
+
+

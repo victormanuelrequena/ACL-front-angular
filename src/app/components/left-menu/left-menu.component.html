@@ -1,0 +1,22 @@
+<div class="menu">
+	<h4 class="title-menu-nav">Estacion Amé</h4>
+	<nav class="menu-nav">
+		<ul class="menu-options">
+			<button class="btn-alquilar-fijo" (click)="showModalReserve()">
+				Alquilar Fijo
+			</button>
+			<form [formGroup]="newPuestoForm" (ngSubmit)="crearPuesto()">
+			<input type="number" name="" formControlName="lugar">
+			<li class="menu-option">
+			<button type="submit">Agregar Puesto</button>
+			</li>
+			</form>
+			<form [formGroup]="deletePuesto" (ngSubmit)="eliminarPuesto()">
+			<input type="number" name="" formControlName="puesto">
+			<li class="menu-option">
+			<button type="button">Eliminar Puesto</button>
+			</li>
+			</form>
+		</ul>
+	</nav>
+</div>

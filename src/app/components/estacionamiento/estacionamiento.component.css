@@ -1,0 +1,161 @@
+.estacionamiento {
+	width: 100%;
+	height: 100%;
+	/*border: 1px solid red;*/
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+}
+.grid-estacionamiento {
+	/*border: 1px solid red;*/
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 360px));
+	justify-content: center;
+	height: auto;
+	grid-gap: 1.2em;
+	margin-top: 2em;
+}
+
+.puesto {
+	width: 100%;
+	height: 400px;
+	/*border: 1px solid red;*/
+	position: relative;
+}
+
+.disponible {
+	background: green;
+}
+
+.ocupado {
+	background: rgba(200,40,60);
+}
+
+.reservado {
+	background: rgba(190,170,30);
+}
+
+.lugar {
+	background: #cca236;
+	display: inline-block;
+	padding: .9em 1.1em;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.btns-disponible-state, .btns-reservado-state, .btns-ocupado-state {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 1em;
+}
+
+form.form-key {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 1em;
+}
+
+.input__key, .input__pagar {
+	border-radius: 10px;
+	width: 150px;
+	border: none;
+	outline: none;
+	font-size: 17px;
+	font-weight: bold;
+	padding: .4em .8em;
+}
+
+.btns-reservado-state {
+	display: flex;
+}
+
+.btn-puesto {
+	border: 1px solid white;
+	font-size: 19px;
+	border-radius: 10px;
+	padding: .6em 1em;
+	background: transparent;
+	cursor: pointer;
+	transition: .4s;
+}
+
+.btn-puesto:hover {
+	background: rgba(90, 90, 90, .2);
+}
+
+/*Modal Reserve---------------------------------------------------------------------------*/
+
+.modal-reservar {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(10,10,10, .5);
+	justify-content: center;
+	align-items: center;
+	display: none;
+	z-index: 1;
+}
+
+.modal-on {
+	display: flex;
+}
+
+.modal {
+	background: #f3f3f3;
+	width: 400px;
+	height: 300px;
+	border-radius: 10px;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+}
+
+.input__pagar {
+	border: 1px solid black;
+}
+
+.btn-pagar {
+	border: none;
+	outline: none;
+	font-size: 19px;
+	border-radius: 10px;
+	padding: .6em 1em;
+	background: rgba(0,0,0);
+	cursor: pointer;
+	color: white;
+	transition: .4s;
+}
+
+.t-comprobante {
+	display: block;
+	text-align: center;
+	padding: .8em 0em;
+	font-size: 20px;
+	font-family: Arial sans-serif;
+}
+
+form.form-modal-reserve {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 1em;
+	padding: 1em 0;
+}
+
